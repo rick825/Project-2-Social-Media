@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>project 2: Social Media</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- nav section -->
+	<section id="nav">
+		<div class="nav">
+			<div class="lnav">
+			   <!-- <img src="" alt=""> -->
+			   <h2>LOGO</h2>
+			</div>
+			<div class="rnav">
+				<div class="ham1">
+				   <div class="line"></div>
+				   <div class="line"></div>
+				   <div class="line"></div>
+				</div>
+				<ul class="navlist">
+					<li class="navitem"><a class="navlink active" href="">
+						Home
+					</a></li>
+					<li class="navitem"><a class="navlink" href="">
+						Link
+					</a></li>
+					<li class="navitem"><a class="navlink" href="">
+						Link
+					</a></li>
+					<li class="navitem"><a class="navlink" href="">
+						Link
+					</a></li>
+					<li class="navitem">
+						<form  class="search">
+							<input type="text" class="sci" placeholder="Search.." name="search">
+							 <button type="submit" class="mainsb"><i class="fa fa-search" id="searchfor"></i></button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end nav secion -->
+
+	<!-- mid section -->
+	<section id="mid">
+		<div class="trio"></div>
+		<div class="mid container">
+			<!-- midleft division -->
+			<div class="ham">
+				<p><i class="hamlin"></i></p>
+				</div>
+			<div class="midleft col-3 midcont">
+				<div class="fixedleft">
+				<!-- Left Division --> 
+                 <div class="smop">
+                	<a href="" class="op1 op">
+                		
+                	</a>
+                	<a href="" class="op2 op">
+                		
+                	</a>
+                	<a href="" class="op3 op">
+                		
+                	</a>
+                	<a  href="" class="op4 op">
+                		
+                	</a>
+                	<a  href="" class="op5 op">
+                		
+                	</a>
+                	<a  href="" class="op6 op">
+                		
+                	</a>
+                  </div>
+               </div>
+			</div>
+			<!-- end midleft division -->
+			<!-- midcenter division -->
+			<div class="midcenter col-6 midcont">
+				<div class="postmain">
+					<div class="row1 pro">
+						<a href=""><img src="image/ch1.png" alt="" class="proimg"></a>
+						<form action="">
+							<input type="text" placeholder="Write whats on your mind.." name="cap" class="inputcap" >
+						</form>
+					</div>
+					<div class="row2 pro">
+						<p><a href="" class="postlink">Add Image</a></p>
+						<p><a href="" class="postlink">Add2</a></p>
+						<p><a href="" class="postlink">Add3</a></p>
+
+					</div>
+				</div>
+			</div>
+			<!-- end midcenter division -->
+			<!-- midright division -->
+			<div class="ham3">
+					<p class="haminside"><i class="left arrow"></i></p>
+				</div>
+			<div class="midright col-3 midcont">
+				<div class="rightdiv">
+				<div class="gigs">
+					<a href="" class="gig1 gig">
+						
+					</a>
+					<a href="" class="gig1 gig">
+						
+					</a>
+					<a href="" class="gig1 gig">
+						
+					</a>
+					<a href="" class="gig1 gig">
+						
+					</a>
+				</div>
+			</div>	
+			</div>
+			<!-- end midright division	 -->
+		</div>
+	</section>
+	<!-- end mid section -->
+
+	<!-- script -->
+	<script>
+		
+		const active=()=>{
+		  const btns = document.querySelector('.navlink');
+
+			for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " active";
+        });
+  	}
+  }
+     
+     active();
+
+		const activenav=()=>{
+			const mainnav=document.querySelector('.navlist');
+			const ham1=document.querySelector('.ham1');
+				const ham3=document.querySelector('.ham3');
+			const rightnav=document.querySelector('.midright');
+			const arrow=document.querySelector('.arrow');
+			const leftnav=document.querySelector('.midleft');
+			const leftham=document.querySelector('.ham');
+			const hamlin=document.querySelector('.hamlin');
+			
+            
+			ham1.addEventListener('click',()=>{
+              mainnav.classList.toggle('navlisttrans');
+              ham1.classList.toggle('hamfocus');
+			});
+
+				ham3.addEventListener('click',()=>{
+               rightnav.classList.toggle('midrightnew');
+               ham3.classList.toggle('down');
+               arrow.classList.toggle('arrowchange');
+			});
+
+				leftham.addEventListener('click',()=>{
+                    leftnav.classList.toggle('midleftvisible');
+                     hamlin.classList.toggle('hamlinvisible');
+				});
+
+
+		}
+
+       activenav();
+
+
+
+        
+		
+		
+	</script>
+	<!-- end script -->
+</body>
+</html>
